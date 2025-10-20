@@ -1,0 +1,21 @@
+<svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="375 250 500 400"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      aria-label="Slok Shah logo"
+    >
+      <g fill="#021e3eff" stroke={#007BFF} strokeWidth="16">
+        <LogoLayer />
+
+        <g transform="translate(0, 0)">
+          <LogoLayer />
+        </g>
+
+        <g transform="translate(251.566, -8.90498)">
+          <LogoLayer />
+        </g>
+      </g>
+    </svg>

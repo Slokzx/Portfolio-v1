@@ -1,0 +1,9 @@
+.skills-title {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 400;
+  color: var(--color-mutedText);
+  line-height: 1;
+  align-items: start;
+  justify-self: start;
+  margin-bottom: 20px;
+}

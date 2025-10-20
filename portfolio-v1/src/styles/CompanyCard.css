@@ -1,0 +1,122 @@
+.company-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(120px, 160px) 1fr;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(18px);
+  color: rgba(195, 206, 234, 0.85);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  border: 1px solid transparent;
+}
+
+@media (min-width: 1024px) {
+  .company-card\:w-\[52\%\] {
+    width: 52%;
+  }
+}
+
+.company-card:hover {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(30, 41, 59, 0.5);
+  --tw-drop-shadow: drop-sh adow(0 10px 8px rgba(0, 0, 0, 0.04))
+    drop-shadow(4px 3px rgba(0, 0, 0, 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.company-card__timeline {
+  display: flex;
+  align-items: flex-start;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.company-card__period {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.company-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.company-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.company-card__title {
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1rem);
+  font-weight: 600;
+  color: #f6f9ff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.company-card__dot {
+  color: rgba(0, 255, 208, 0.8);
+}
+
+.company-card__subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.company-card__description {
+  margin: 0;
+  line-height: 1.7;
+  font-size: clamp(0.8rem, 1.25vw, 0.8rem);
+}
+
+.company-card__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.company-card__links a {
+  color: rgba(0, 255, 208, 0.85);
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.company-card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.company-card__skill-pill {
+  backdrop-filter: blur(12px);
+}
+
+@media (max-width: 900px) {
+  .company-card {
+    grid-template-columns: 1fr;
+  }
+
+  .company-card__timeline {
+    order: -1;
+  }
+}

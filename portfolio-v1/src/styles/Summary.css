@@ -1,0 +1,16 @@
+.summary-title {
+  margin: 0;
+  font-size: clamp(2.75rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-mutedText, #a8b2d1);
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+.summary-description {
+  margin-bottom: 30px;
+  font-size: clamp(1rem, 2.2vw, 1rem);
+  line-height: 1.7;
+  max-width: 560px;
+  color: var(--color-mutedText, #a8b2d1);
+}

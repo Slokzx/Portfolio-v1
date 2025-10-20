@@ -1,0 +1,129 @@
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding: 6rem 0 3rem;
+  color: var(--color-text, #ffffff);
+  background: transparent;
+  min-height: 70vh;
+}
+
+@media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
+  .hero-section {
+    height: auto;
+    padding-top: var(--nav-height);
+  }
+}
+
+.hero-item {
+  max-width: 680px;
+}
+
+.hero-kicker {
+  font-size: clamp(0.875rem, 1.8vw, 1.1rem);
+  letter-spacing: 0.2em;
+  color: var(--color-primary, #a8b2d1);
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(2.75rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-mutedText, #a8b2d1);
+  line-height: 1;
+}
+
+.hero-subtitle {
+  margin-bottom: 20px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-subtitle, #8892b0);
+  line-height: 1;
+}
+
+.hero-description {
+  margin-bottom: 60px;
+  font-size: clamp(1rem, 2.2vw, 1rem);
+  line-height: 1.7;
+  max-width: 560px;
+  color: var(--color-mutedText, #a8b2d1);
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-background, #0a192f);
+  background-color: var(--color-accent, #007bff);
+  border: 1px solid transparent;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.hero-emoji {
+  font-size: clamp(2rem, 2.2vw, 2.5rem);
+}
+
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px #007bff;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 8rem 0 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 6rem 0 3rem;
+  }
+}
+.hero-image {
+  position: relative;
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 3rem;
+  margin-left: 6rem;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  box-shadow: 0 25px 45px rgba(15, 98, 254, 0.25);
+  transition: box-shadow 0.35s ease;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 98, 254, 0.55),
+    rgba(0, 255, 208, 0.2)
+  );
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.hero-image__img {
+  display: block;
+  width: clamp(220px, 40vw, 320px);
+  height: auto;
+  border-radius: inherit;
+}
+
+.hero-image:hover {
+  box-shadow: 0 35px 65px rgba(15, 98, 254, 0.35);
+}
+
+.hero-image:hover::after {
+  opacity: 0;
+}

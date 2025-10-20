@@ -1,0 +1,26 @@
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background-color: var(--color-background, #0a192f);
+  color: var(--color-text, #ffffff);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1320px;
+  padding: 6rem 1.5rem 3rem;
+  box-sizing: border-box;
+}
+
+section {
+  margin: 0px auto;
+  padding: 20px 0px;
+  max-width: 1250px;
+}
