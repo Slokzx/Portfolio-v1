@@ -28,7 +28,7 @@ const Skillset = () => {
         <h1 className="skills-title">My Skillsets</h1>
       </div>
       <motion.div
-        className="grid gap-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-[110%]"
+        className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-[110%]"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
