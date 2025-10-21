@@ -41,6 +41,7 @@ const Work = () => {
               description={company.description}
               skills={company.skills}
               highlight={inx === 0}
+              href={company.href}
             />
           </motion.div>
         ))}

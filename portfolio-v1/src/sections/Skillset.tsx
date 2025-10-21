@@ -23,12 +23,12 @@ const Skillset = () => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      <div className="skills-title flex gap-6">
+      <div className="skills-title flex items-center gap-4">
         <p className="hero-emoji">👨‍💻</p>
         <h1 className="skills-title">My Skillsets</h1>
       </div>
       <motion.div
-        className="mb-50 grid grid-cols-5"
+        className="grid gap-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-[110%]"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}

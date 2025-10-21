@@ -13,7 +13,7 @@ export const data = {
     description: [
       "I've built products for companies and businesses around the globe ranging from marketing websites to complex solutions and enterprise apps with focus on fast, elegant and accessible user experiences.",
 
-      "I modernized legacy interfaces into a unified React design system collaborating with designers to deliver pixel-perfect and WCAG-compliant UIs. I also developed interactive geospatial visualization tools with React, Leaflet, and MapLibre to display millions of property records in real time. Mentoring a small team, I improved delivery speed by 30% through agile workflows and structured reviews.",
+      "At Lightbox, I have modernized legacy interfaces into a unified React design system collaborating with designers to deliver pixel-perfect and WCAG-compliant UIs. I also developed interactive geospatial visualization tools with React, Leaflet, and MapLibre to display millions of property records in real time. Mentoring a small team, I improved delivery speed by 30% through agile workflows and structured reviews.",
 
       "At Apple, I built internal React + Redux applications for manufacturing operations, automating manual workflows and improving efficiency by 40%. I established a shared React component library adopted by multiple teams, ensuring design and code consistency. My work on performance optimization, modular architecture, and accessibility set new standards for UI reliability and developer experience across projects.",
     ],
@@ -40,6 +40,7 @@ export const data = {
         "CSS",
         "Websockt",
       ],
+      href: "https://www.lightboxre.com/lightbox-live/",
     },
     {
       timeline: {
@@ -60,6 +61,7 @@ export const data = {
         "HTML5",
         "Storybook",
       ],
+      href: "https://www.apple.com/supply-chain/",
     },
     {
       timeline: {
@@ -71,15 +73,10 @@ export const data = {
       description:
         "Developed the company’s primary marketing website with React, JavaScript, and CSS3, driving improved customer engagement. Reduced development costs by standardizing UI and creating reusable components for the design system.",
       skills: ["React", "Redux", "Javascript", "CSS", "HTML5"],
+      href: "https://www.capillarytech.com/",
     },
   ],
   skills: [
-    {
-      heading: "User Interface",
-      description:
-        "Known as having hawk eyes by my peers, I strive for pixel-perfect finalized designs.",
-      logo: ["Figma"],
-    },
     {
       heading: "Component Libray",
       description:
@@ -93,16 +90,22 @@ export const data = {
       logo: ["Github", "NPM"],
     },
     {
-      heading: "Testing",
+      heading: "User Interface",
       description:
-        "Developed and maintained end-to-end testing frameworks using Cypress, ensuring UI reliability, regression coverage, and faster release cycles.",
-      logo: ["Cypress", "jest"],
+        "Known as having hawk eyes by my peers, I strive for pixel-perfect finalized designs.",
+      logo: ["Figma"],
     },
     {
       heading: "Web",
       description:
         "My web projects are responsive, accessible, and intuitive for all walks of life while reassuring they will respond the same on any browser. ",
       logo: ["windows", "apple"],
+    },
+    {
+      heading: "Testing",
+      description:
+        "Developed and maintained end-to-end testing frameworks using Cypress, ensuring UI reliability, regression coverage, and faster release cycles.",
+      logo: ["Cypress", "jest"],
     },
   ],
   email: "slokshah92@gmail.com",
@@ -112,16 +115,20 @@ export const data = {
       url: "https://github.com/Slokzx",
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/slokzx/",
+      name: "Linkedin",
+      url: "https://www.linkedin.com/in/slokshah/",
     },
     {
       name: "Twitter",
       url: "https://x.com/slokzx",
     },
     {
-      name: "Linkedin",
-      url: "https://www.linkedin.com/in/slokshah/",
+      name: "Instagram",
+      url: "https://www.instagram.com/slokzx/",
+    },
+    {
+      name: "Youtube",
+      url: "https://www.youtube.com/@SlokShah",
     },
   ],
   footer:

@@ -9,8 +9,9 @@
   --color-text: #ffffff;
   --color-mutedText: #a8b2d1;
   --color-primary: #007bff;
-  --color-accent: #00ffd0;
+  --color-accent: #49a8ff;
   --color-border: #1f2a48;
+  --color-cardHover: rgba(30, 41, 59, 0.5);
   color-scheme: light dark;
   color: var(--color-text, #ffffff);
   background-color: var(--color-background, #0a192f);

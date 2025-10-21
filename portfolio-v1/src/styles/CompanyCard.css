@@ -93,7 +93,7 @@
 }
 
 .company-card__links a {
-  color: var(--color-primaryt);
+  color: var(--color-primary);
   font-size: 0.92rem;
   text-decoration: none;
   display: inline-flex;
@@ -118,5 +118,25 @@
 
   .company-card__timeline {
     order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .company-card {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .company-card__timeline {
+    font-size: 0.65rem;
+    justify-content: flex-start;
+  }
+
+  .company-card__title {
+    font-size: 1.05rem;
+  }
+
+  .company-card__description {
+    font-size: 0.9rem;
   }
 }

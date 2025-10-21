@@ -2,11 +2,6 @@ import clsx from "clsx";
 import Button from "./Button";
 import "../styles/CompanyCard.css";
 
-export type CompanyLink = {
-  label: string;
-  href: string;
-};
-
 export type CompanyCardProps = {
   timeline: { startYear: string; endYear: string };
   companyName: string;
@@ -14,7 +9,7 @@ export type CompanyCardProps = {
   subtitle?: string;
   description: string;
   skills: string[];
-  links?: CompanyLink[];
+  href?: string;
   highlight?: boolean;
 };
 
@@ -25,7 +20,7 @@ const CompanyCard = ({
   subtitle,
   description,
   skills,
-  links = [],
+  href,
   highlight = false,
 }: CompanyCardProps) => {
   const periodLabel = `${timeline.startYear} — ${timeline.endYear}`;
@@ -43,7 +38,9 @@ const CompanyCard = ({
           <h3 className="company-card__title">
             {title}
             <span className="company-card__dot">·</span>
-            {companyName}
+            <a href={href} target="_blank" rel="noreferrer">
+              {companyName}
+            </a>
           </h3>
           {subtitle && (
             <p className="company-card__subtitle" aria-label="Role">
@@ -53,19 +50,6 @@ const CompanyCard = ({
         </header>
 
         <p className="company-card__description">{description}</p>
-
-        {links.length > 0 && (
-          <ul className="company-card__links">
-            {links.map(({ label, href }) => (
-              <li key={label}>
-                <a href={href} target="_blank" rel="noreferrer">
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
-
         <div className="company-card__skills">
           {skills.map((skill) => (
             <Button

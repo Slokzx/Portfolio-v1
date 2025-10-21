@@ -132,3 +132,14 @@
     order: -1;
   }
 }
+
+@media (max-width: 640px) {
+  .small-card {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .small-card__logos {
+    justify-content: flex-start;
+  }
+}

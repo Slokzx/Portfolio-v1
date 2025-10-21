@@ -71,7 +71,7 @@ const Contact = () => {
     <motion.section
       id="contact"
       ref={sectionRef}
-      className="contact-section"
+      className="contact-section mt-[10rem]"
       variants={sectionReveal}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -82,7 +82,7 @@ const Contact = () => {
       </div>
 
       <div className="message-input">
-        <div className="form-row grid grid-cols-2 gap-8">
+        <div className="form-row grid gap-8 md:grid-cols-2">
           <Input
             id="name"
             type="text"

@@ -16,11 +16,11 @@ function App() {
       <Navbar />
       <main className="app-main">
         <Hero />
-        <div className="mb-20 grid grid-cols-2 gap-4">
-          <div className="cols-span-2">
+        <div className="mb-16 grid gap-12 lg:grid-cols-2">
+          <div className="w-full">
             <Summary />
           </div>
-          <div>
+          <div className="w-full">
             <Work />
           </div>
         </div>

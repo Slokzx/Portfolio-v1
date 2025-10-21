@@ -25,7 +25,7 @@ const Button = ({
 
   const variants: Record<string, string> = {
     primary:
-      "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 disabled:bg-blue-400 ",
+      "bg-[#007BFF] text-white hover:bg-blue-700 focus:ring-blue-500 disabled:bg-blue-400 ",
     secondary:
       "bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400 disabled:bg-gray-300",
     outline:

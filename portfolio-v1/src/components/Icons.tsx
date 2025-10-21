@@ -14,6 +14,7 @@ import IconSketch from "../Icons/sketch";
 import IconTailwind from "../Icons/tailwind";
 import IconTwitter from "../Icons/twitter";
 import IconWindows from "../Icons/windows";
+import IconYouTube from "../Icons/youtube";
 import { useTheme } from "../hooks/useTheme";
 import { getThemeColors, type ThemeColorTokens } from "../styles/colors";
 
@@ -41,6 +42,7 @@ const ICON_REGISTRY: Record<string, IconRegistryEntry> = {
   tailwind: { component: IconTailwind },
   twitter: { component: IconTwitter },
   windows: { component: IconWindows },
+  youtube: { component: IconYouTube },
 };
 
 const Icon = ({ name, className }: IconProps) => {
