@@ -36,6 +36,10 @@
   padding: 8px;
 }
 
+.message-input input.placeholder {
+  color: var(--color-mutedText);
+}
+
 .form-row {
   margin-bottom: 1.5rem;
   width: 100%;
@@ -48,8 +52,9 @@
 }
 
 .input-label {
-  color: var(--color-mutedText);
+  color: var(--color-primary);
   opacity: 0.5;
+  font-weight: 500;
 }
 
 .form-input {
@@ -59,4 +64,11 @@
 
 .form-textarea {
   border-bottom: 0.5px solid var(--color-primary);
+}
+
+.success-message {
+  color: var(--color-primary);
+  align-items: center;
+  justify-self: center;
+  margin-top: 1.5rem;
 }
