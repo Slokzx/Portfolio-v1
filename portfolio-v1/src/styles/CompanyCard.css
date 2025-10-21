@@ -6,7 +6,7 @@
   padding: clamp(0.75rem, 2vw, 1.5rem);
   border-radius: 0.75rem;
   backdrop-filter: blur(18px);
-  color: rgba(195, 206, 234, 0.85);
+  color: var(--color-mutedText);
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
@@ -22,7 +22,7 @@
 
 .company-card:hover {
   border: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(30, 41, 59, 0.5);
+  background: var(--color-cardHover);
   --tw-drop-shadow: drop-sh adow(0 10px 8px rgba(0, 0, 0, 0.04))
     drop-shadow(4px 3px rgba(0, 0, 0, 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
@@ -36,7 +36,7 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-mutedText);
 }
 
 .company-card__period {
@@ -60,7 +60,7 @@
   margin: 0;
   font-size: clamp(1rem, 1.5vw, 1rem);
   font-weight: 600;
-  color: #f6f9ff;
+  color: var(--color-mutedText);
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
@@ -68,13 +68,13 @@
 }
 
 .company-card__dot {
-  color: rgba(0, 255, 208, 0.8);
+  color: var(--color-primary);
 }
 
 .company-card__subtitle {
   margin: 0;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-mutedText);
 }
 
 .company-card__description {
@@ -93,7 +93,7 @@
 }
 
 .company-card__links a {
-  color: rgba(0, 255, 208, 0.85);
+  color: var(--color-primaryt);
   font-size: 0.92rem;
   text-decoration: none;
   display: inline-flex;

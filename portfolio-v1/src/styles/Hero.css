@@ -37,7 +37,7 @@
   margin-bottom: 20px;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
-  color: var(--color-subtitle, #8892b0);
+  color: var(--color-primary);
   line-height: 1;
 }
 

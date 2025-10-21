@@ -4,12 +4,14 @@ export const palette = {
   background: "#0f172a",
   surface: "#112240",
   surfaceMuted: "#14213d",
-  primary: "007BFF#",
-  accent: "#007BFF",
+  primary: "#007BFF",
   textOnDark: "#ffffff",
   textMuted: "#a8b2d1",
   border: "#1f2a48",
   subtitle: "#8892B0",
+  textOnLight: "#272727",
+  cardHoverDark: "rgba(30, 41, 59, 0.5)",
+  cardHoverLight: "rgba(195, 197, 201, 0.5)",
 };
 
 export type ThemeColorTokens = {
@@ -18,9 +20,9 @@ export type ThemeColorTokens = {
   text: string;
   mutedText: string;
   primary: string;
-  accent: string;
   border: string;
   subtitle: string;
+  cardHover: string;
 };
 
 export const themeColors: Record<Theme, ThemeColorTokens> = {
@@ -29,20 +31,20 @@ export const themeColors: Record<Theme, ThemeColorTokens> = {
     surface: palette.surface,
     text: palette.textOnDark,
     mutedText: palette.textMuted,
-    primary: palette.accent,
-    accent: palette.primary,
+    primary: palette.primary,
     border: palette.border,
     subtitle: palette.subtitle,
+    cardHover: palette.cardHoverDark,
   },
   light: {
-    background: palette.background,
+    background: palette.textOnDark,
     surface: palette.surfaceMuted,
     text: palette.textOnDark,
-    mutedText: "#c1c9e8",
+    mutedText: palette.textOnLight,
     primary: palette.primary,
-    accent: palette.accent,
     border: palette.border,
-    subtitle: palette.accent,
+    subtitle: palette.subtitle,
+    cardHover: palette.cardHoverLight,
   },
 };
 

@@ -5,12 +5,12 @@ import "../styles/ThemeToggle.css";
 
 const trackVariants: Variants = {
   light: {
-    backgroundColor: "rgba(15, 98, 254, 0.3)",
-    borderColor: "rgba(15, 98, 254, 0.6)",
+    backgroundColor: "var(--color-surfaceMuted)",
+    borderColor: "var(--color-primary)",
   },
   dark: {
-    backgroundColor: "rgba(15, 98, 254, 0.3)",
-    borderColor: "rgba(15, 98, 254, 0.6)",
+    backgroundColor: "var(--color-surfaceMuted)",
+    borderColor: "var(--color-primary)",
   },
 };
 
@@ -22,7 +22,7 @@ const thumbVariants: Variants = {
   },
   dark: {
     x: 28,
-    backgroundColor: "var(--color-accent)",
+    backgroundColor: "var(--color-primary)",
     color: "var(--color-background)",
   },
 };
@@ -78,13 +78,6 @@ const ThemeToggle = () => {
           )}
         </AnimatePresence>
       </motion.span>
-
-      <span className="theme-toggle__icon theme-toggle__icon--sun">
-        <FaSun />
-      </span>
-      <span className="theme-toggle__icon theme-toggle__icon--moon">
-        <FaMoon />
-      </span>
     </motion.button>
   );
 };

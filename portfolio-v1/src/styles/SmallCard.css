@@ -6,7 +6,7 @@
   padding: clamp(0.75rem, 2vw, 1.5rem);
   border-radius: 0.75rem;
   backdrop-filter: blur(18px);
-  color: rgba(195, 206, 234, 0.85);
+  color: var(--color-mutedText);
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
@@ -51,7 +51,7 @@
   margin: 0;
   font-size: clamp(1rem, 1.5vw, 1rem);
   font-weight: 600;
-  color: #f6f9ff;
+  color: var(--color-textMuted);
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
@@ -59,13 +59,13 @@
 }
 
 .small-card__dot {
-  color: rgba(0, 255, 208, 0.8);
+  color: var(--color-primary);
 }
 
 .small-card__subtitle {
   margin: 0;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-textMuted);
 }
 
 .small-card__description {

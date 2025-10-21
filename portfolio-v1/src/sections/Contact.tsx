@@ -1,9 +1,10 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState, type ChangeEvent } from "react";
+import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import Button from "../components/Button";
 import "../styles/Contact.css";
 import Input from "../components/Input";
 import { sectionReveal } from "../constants/transitions";
+import { data } from "../constants/data";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -14,6 +15,8 @@ const Contact = () => {
   const nameMessageRef = useRef<HTMLTextAreaElement>(null);
   const sectionRef = useRef<HTMLElement | null>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-20%" });
+  const [status, setStatus] = useState("");
+  const successMessage = data.contact.successMessage;
 
   const handleChange = (e: ChangeEvent, section: string) => {
     e.preventDefault();
@@ -35,9 +38,34 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = () => {
-    console.log(name, email, message);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus(successMessage.loading);
+    const form = { name, email, message };
+
+    const res = await fetch(data.contact.formAPI, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    if (res.ok) {
+      setName("");
+      setEmail("");
+      setMessage("");
+      setStatus(successMessage.success);
+    } else {
+      setStatus(successMessage.error);
+    }
   };
+
+  useEffect(() => {
+    if (status === successMessage.success) {
+      setTimeout(() => {
+        setStatus("");
+      }, 10000);
+    }
+  }, [status, successMessage.success]);
 
   return (
     <motion.section
@@ -49,16 +77,14 @@ const Contact = () => {
       animate={isInView ? "visible" : "hidden"}
     >
       <div className="message-title">
-        <h1 className="send-message">Send me a message!</h1>
-        <h3 className="send-message-subtitle">
-          Got a question or proposal, or just want <br /> to say hello? Go
-          ahead.
-        </h3>
+        <h1 className="send-message">{data.contact.title}</h1>
+        <h3 className="send-message-subtitle">{data.contact.subtitle}</h3>
       </div>
 
       <div className="message-input">
         <div className="form-row grid grid-cols-2 gap-8">
           <Input
+            id="name"
             type="text"
             ref={nameRef}
             value={name}
@@ -68,6 +94,7 @@ const Contact = () => {
             label="Your Name"
           />
           <Input
+            id="email"
             type="text"
             ref={nameEmailRef}
             value={email}
@@ -84,9 +111,12 @@ const Contact = () => {
               value={message}
               ref={nameMessageRef}
               onChange={(e) => handleChange(e, "message")}
-              placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
+              placeholder={data.contact.messagePlaceholder}
             />
           </div>
+        </div>
+        <div className="success-message">
+          <span>{status}</span>
         </div>
       </div>
 
@@ -95,9 +125,9 @@ const Contact = () => {
           size="xl"
           type="submit"
           variant="primary"
-          onClick={() => handleSubmit}
+          onClick={handleSubmit}
         >
-          Shoot
+          {data.contact.buttonText}
         </Button>
       </div>
     </motion.section>

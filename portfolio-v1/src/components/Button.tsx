@@ -8,7 +8,7 @@ export type ButtonProps = {
   className?: string;
   filled?: boolean;
   variant: "primary" | "secondary" | "outline" | "danger" | "pill";
-  onClick: () => void;
+  onClick: (e: React.FormEvent) => void;
 };
 
 const Button = ({

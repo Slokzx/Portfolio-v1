@@ -1,5 +1,6 @@
 .vertical-text {
   writing-mode: vertical-rl;
   color: var(--color-primary);
-  letter-spacing: 6px;
+  letter-spacing: 3px;
+  font-size: smaller;
 }
