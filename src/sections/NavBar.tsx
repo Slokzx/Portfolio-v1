@@ -10,10 +10,10 @@ import "../styles/NavBar.css";
 const Navbar = () => {
   return (
     <nav
-      className="fixed top-0 left-0 z-50 w-full justify-end backdrop-blur-sm"
+      className="fixed top-0 left-0 z-50 w-full backdrop-blur-sm"
       style={{ backgroundColor: "var(--color-background)" }}
     >
-      <div className="mx-auto flex max-w-[90%] items-center justify-between px-6 py-4 text-[var(--color-text)]">
+      <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4 py-4 text-[var(--color-text)] sm:px-6">
         {/* <Logo className="h-12 w-12 flex-shrink-0 drop-shadow-sm" /> */}
 
         <Icon name="Logo" />

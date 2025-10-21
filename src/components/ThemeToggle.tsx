@@ -5,12 +5,12 @@ import "../styles/ThemeToggle.css";
 
 const trackVariants: Variants = {
   light: {
-    backgroundColor: "var(--color-surfaceMuted)",
-    borderColor: "var(--color-primary)",
+    backgroundColor: "rgba(73, 168, 255, 0.2)",
+    borderColor: "rgba(73, 168, 255, 0.55)",
   },
   dark: {
-    backgroundColor: "var(--color-surfaceMuted)",
-    borderColor: "var(--color-primary)",
+    backgroundColor: "rgba(73, 168, 255, 0.2)",
+    borderColor: "rgba(73, 168, 255, 0.45)",
   },
 };
 

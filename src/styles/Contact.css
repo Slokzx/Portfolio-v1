@@ -47,25 +47,25 @@
 
 .message-input input {
   height: 60px;
-  border-bottom: 0.5px solid var(--color-primary);
-  padding: 8px;
-  color: var(--color-mutedText);
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .message-input input::placeholder {
   color: var(--color-mutedText);
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .form-row {
   margin-bottom: 1.5rem;
   width: 100%;
-  display: flex;
-  position: relative;
-  -webkit-box-pack: space-between;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
 .input-label {
@@ -80,13 +80,33 @@
 }
 
 .form-textarea {
-  border-bottom: 0.5px solid var(--color-primary);
-  color: var(--color-mutedText);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: var(--color-surface);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .form-textarea textarea::placeholder {
   color: var(--color-mutedText);
-  opacity: 0.5;
+  opacity: 1;
+}
+
+.form-textarea textarea {
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  resize: vertical;
+  min-height: 120px;
+  padding: 0.8rem 1rem;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.message-input input:focus,
+.form-textarea:focus-within {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(73, 168, 255, 0.25);
 }
 
 .success-message {
