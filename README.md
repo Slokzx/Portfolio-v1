@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# Slok Shah – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, single-page React portfolio that showcases Slok Shah’s engineering experience, skills, and contact information. The site is built with Vite + TypeScript and features animated sections, theme switching, and a mobile-first layout.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Hero & About** – Highlights current role and experience with animated, scroll-triggered reveals.
+- **Experience Cards** – Timeline-style company cards with key accomplishments and tool stacks.
+- **Skillset Grid** – Categorised skill tiles with tooltips and responsive layout across breakpoints.
+- **Theme Toggle** – Persisted light/dark mode with custom animated toggle and CSS token system.
+- **Cursor Glow** – Custom pointer trail that subtly illuminates the page background.
+- **Mobile Social Bar** – Mobile-friendly email + social panel that replaces desktop side rails.
+- **Contact Form** – Formspree-backed form with validation feedback and success messaging.
+- **Responsive Design** – Layout adjusts for desktop, tablet and mobile without loss of fidelity.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Bundler**: [Vite](https://vitejs.dev/)
+- **Styling**: Tailwind-inspired utility classes, custom CSS modules
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: Custom SVG set + react-icons
+- **Forms**: [Formspree](https://formspree.io/)
+- **Deployment**: [Vercel](https://vercel.com/)
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# install dependencies
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# start dev server
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# build for production
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open the dev server output (default `http://localhost:5173`) to view the site locally.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+  assets/            # images & static media
+  components/        # shared UI components (Logo, ThemeToggle, Cursor, etc.)
+  sections/          # page sections (Hero, Summary, Work, Skillset, Contact, Footer)
+  styles/            # CSS files that back each section/component
+  constants/data.ts  # centralised content (hero copy, companies, skills, socials)
+```
+
+## 🌐 Deployment Notes
+
+- The project root is the current directory (formerly `/portfolio-v1`).
+- `vercel.json` is configured for Vercel; deploy using `npm run build` as the build command and `dist` as the output directory.
+
+## 📄 License
+
+This project is proprietary to Slok Shah. Feel free to reference the structure, but do not reuse content or assets without permission.
+
+## 🙌 Acknowledgements
+
+- Designed in Figma, built in VS Code.
+- Typography: [Inter](https://rsms.me/inter/).
+- Hosting by Vercel.
+
+---
+
+Need improvements or found a bug? Open an issue or reach out at [slokshah92@gmail.com](mailto:slokshah92@gmail.com).
